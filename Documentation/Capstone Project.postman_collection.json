@@ -1,0 +1,1835 @@
+{
+	"info": {
+		"_postman_id": "2e28340c-5948-4477-b560-080194a624a1",
+		"name": "Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40401865"
+	},
+	"item": [
+		{
+			"name": "BookingInfo",
+			"item": [
+				{
+					"name": "Create Bookinginfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create Patient\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingInfo_id\":\"BI1\",\r\n    \"bus_id\": \"B1\",\r\n    \"bus_name\": \"KKR Travels\",\r\n    \"availableSeaterSeats\": \"20\",\r\n    \"availableSleeperSeats\": \"10\",\r\n    \"routeInfo_id\": \"RI1\",\r\n    \"boardingDateTime\": \"2025-05-14T10:00\",\r\n    \"droppingDateTime\": \"2025-05-14T21:00\",\r\n    \"origin\": \"Tirunelveli\",\r\n    \"destination\": \"Chennai\",\r\n    \"total_distance\":625\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/add",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Bookinginfo by Bookinginfo Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/id/BI1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"id",
+								"BI1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Bookinginfo by Bus Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Email\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/bus/B1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"bus",
+								"B1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Bookinginfo by Route Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Mobile\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/route/RI1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"route",
+								"RI1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bookinginfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingInfo_id\":\"BI1\",\r\n    \"booking_date\": \"2025-05-14\",\r\n    \"bus_id\": \"B2\",\r\n    \"destination\": \"Kovai\",\r\n    \"end_time\": \"22:00\",\r\n    \"location_id\": \"L1\",\r\n    \"routeInfo_id\": \"RI1\",\r\n    \"origin\":\"Madurai\",\r\n    \"start_time\":\"11:00\",\r\n    \"total_distance\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/update/BI1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"update",
+								"BI1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bookinginfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo/delete/BI1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo",
+								"delete",
+								"BI1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwidXNlcklkIjoiUDEiLCJpYXQiOjE3NDcxMzA2NDksImV4cCI6MTc0NzEzNDI0OX0.K5SDXukzvX02dbKltaqTmD6gHWuMKwuSWT3zsDLIlAo",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Bus",
+			"item": [
+				{
+					"name": "Create Bus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create Patient\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bus_id\":\"B1\",\r\n    \"bus_name\": \"By pass rider OLP\",\r\n    \"ratePerKm\":2,\r\n    \"lower_left\": \"Seater\",\r\n    \"lower_right\": \"Seater\",\r\n    \"numOfSeaterSeats\": 24,\r\n    \"numOfSleeperSeats\": 6,\r\n    \"isUpperDeck\": true,\r\n    \"isACBus\": true,\r\n    \"chargingPoint\": true,\r\n    \"blanket\": true,\r\n    \"waterBottle\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bus/add",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bus",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of Bus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bus",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Bus by Bus Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bus/id/B2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bus",
+								"id",
+								"B2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bus_id\":\"B1\",\r\n    \"blanket\": true,\r\n    \"bus_name\": \"By pass rider\",\r\n    \"bus_operator\": \"TNBC\",\r\n    \"chargingPoint\": true,\r\n    \"isACBus\": true,\r\n    \"isLiveTrackable\": true,\r\n    \"isSleeper\":true,\r\n    \"ratePerKm\":12,\r\n    \"toilet\": true,\r\n    \"waterBottle\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bus/update/B1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bus",
+								"update",
+								"B1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bus/delete/B1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bus",
+								"delete",
+								"B1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RouteInfo",
+			"item": [
+				{
+					"name": "Create RouteInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create Patient\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routeInfo_id\":\"RI2\",\r\n    \"origin\": \"Chennai\",\r\n    \"destination\": \"Tirunelveli\",\r\n    \"distance\":10,\r\n    \"travel_time\": \"01:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routeinfo/add",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routeinfo",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an RouteInfo by RouteInfo Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routeinfo/id/RI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routeinfo",
+								"id",
+								"RI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update RouteInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"routeInfo_id\":\"RI2\",\r\n    \"origin\": \"Malasiya\",\r\n    \"destination\": \"Tirunelveli\",\r\n    \"distance\":10,\r\n    \"travel_time\": \"01:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routeinfo/update/RI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routeinfo",
+								"update",
+								"RI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete RouteInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routeinfo/delete/RI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routeinfo",
+								"delete",
+								"RI2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BusBookingInfo",
+			"item": [
+				{
+					"name": "Create BusBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create Patient\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busBookingInfo_id\":\"BBI2\",\r\n    \"bus_id\": \"B1\",\r\n    \"bookedSeatNum\": \"LL!\",\r\n    \"booked_date\": \"2025-05-13\",\r\n    \"passenger_gender\":\"Male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routeinfo/add",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routeinfo",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of BusBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/busbookinginfo",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"busbookinginfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an BusBookingInfoby BusBookingInfo Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/busbookinginfo/id/BBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"busbookinginfo",
+								"id",
+								"BBI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update BusBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busBookingInfo_id\":\"BBI2\",\r\n    \"bus_id\": \"B1\",\r\n    \"bookedSeatNum\": \"LL1\",\r\n    \"booked_date\": \"2025-05-13\",\r\n    \"passenger_gender\":\"Male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/busbookinginfo/update/BBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"busbookinginfo",
+								"update",
+								"BBI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete BusBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/busBookingInfo/delete/BBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"busBookingInfo",
+								"delete",
+								"BBI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of BusBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/busbookinginfo",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"busbookinginfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PassengerBookingInfo",
+			"item": [
+				{
+					"name": "Create PassengerBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Create Patient\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passengerBookingInfo_id\":\"PBI2\",\r\n    \"pnr_Number\": \"1234\",\r\n    \"bookingInfo_id\": \"BI1\",\r\n    \"booking_datetime\": \"2025-05-13T15:40\",\r\n    \"passenger_id\": \"P1\",\r\n    \"passenger_name\": \"Bava\",\r\n    \"passenger_gender\": \"Male\",\r\n    \"seat_num\": \"LL1\",\r\n    \"paymentType\": \"UPI\",\r\n    \"passenger_mobile\": 9988776655,\r\n    \"passenger_email\": \"bava@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo/add",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of PassengerBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an PassengerBookingInfo by Passenger Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo/subid/P2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo",
+								"subid",
+								"P2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an PassengerBookingInfo by PassengerBookingInfo Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo/id/PBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo",
+								"id",
+								"PBI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update PassengerBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passengerBookingInfo_id\":\"PBI2\",\r\n    \"passenger_id\": \"P2\",\r\n    \"passenger_name\": \"Khan\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo/update/PBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo",
+								"update",
+								"PBI2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete PassengerBookingInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passengerbookingInfo/delete/PBI2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passengerbookingInfo",
+								"delete",
+								"PBI2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Passenger",
+			"item": [
+				{
+					"name": "List of Passenger",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Passenger by Passenger Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Id\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger/id/P1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger",
+								"id",
+								"P1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Passenger by Passenger Email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Email\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger/email/bava@gmail.com",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger",
+								"email",
+								"bava@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Passenger by Passenger Mobile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Get an Passenger by Passenger Mobile\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger/mobile/9988776655",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger",
+								"mobile",
+								"9988776655"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update passenger",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Update passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passenger_id\":\"P2\",\r\n    \"passenger_name\": \"Bava\",\r\n    \"passenger_age\": 30,\r\n    \"passenger_gender\": \"Male\",\r\n    \"passenger_email\": \"bavakhan123@gmail.com\",\r\n    \"passenger_mobile\": \"9988776655\",\r\n    \"passenger_code\": 9696\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger/update/P2",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger",
+								"update",
+								"P2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete passenger",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Delete passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/passenger/delete/P1",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"passenger",
+								"delete",
+								"P1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Non-Auth",
+			"item": [
+				{
+					"name": "Passenger login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code==200){\r",
+									"    pm.environment.set(\"token\", pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"bava\",\r\n    \"password\": \"pass\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/user/login",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "This will generate token role of the token is \"ROLE_PATIENT\""
+					},
+					"response": []
+				},
+				{
+					"name": "Register Passenger",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passenger_id\":\"P2\",\r\n    \"passenger_name\": \"Bava\",\r\n    \"passenger_dob\": \"1997-03-01\",\r\n    \"passenger_gender\": \"Male\",\r\n    \"passenger_email\": \"bava@gmail.com\",\r\n    \"passenger_mobile\": \"9988776655\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/user/register",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						},
+						"description": "This will create patient profile."
+					},
+					"response": []
+				},
+				{
+					"name": "Admin login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code==200){\r",
+									"    pm.environment.set(\"token\", \"Bearer \" + pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/user/login",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "This will generate token role of the token is \"ROLE_ADMIN\""
+					},
+					"response": []
+				},
+				{
+					"name": "List of RouteInfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Routes\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/routes",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of Bookinginfo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List of Passenger\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_URL}}/bookinginfo",
+							"host": [
+								"{{base_URL}}"
+							],
+							"path": [
+								"bookinginfo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "Bearer Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwidXNlcklkIjoiUDEiLCJpYXQiOjE3NDcxMzA1NDcsImV4cCI6MTc0NzEzNDE0N30.KmM82Z-7zRTxry0rJZjgIKGzKa9qkMCQAqOLUkMufWo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
